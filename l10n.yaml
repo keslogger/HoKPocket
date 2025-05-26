@@ -1,0 +1,15 @@
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+nullable-getter: false
+synthetic-package: false
+preferred-supported-locales:
+  - en # English
+  - pt # Portuguese
+  - tr # Turkish
+  - es # Spanish
+  - fil # Filipino
+  - de # German
+  - fr # French
+  - ms # Malay
+  - zh # Chinese
