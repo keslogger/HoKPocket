@@ -30,7 +30,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get build => 'Dizilim';
 
   @override
-  String get cancelButtonLabel => 'Cancel';
+  String get cancelButtonLabel => 'İptal';
 
   @override
   String get cancelar => 'İptal';
@@ -176,7 +176,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get salvar => 'Kaydet';
 
   @override
-  String get selectButtonLabel => 'Select';
+  String get selectButtonLabel => 'Seçin';
 
   @override
   String get selecioneUmaCategoria => 'Yukarıdan bir kategori seçin.';

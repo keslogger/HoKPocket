@@ -30,7 +30,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get build => 'Build';
 
   @override
-  String get cancelButtonLabel => 'Cancel';
+  String get cancelButtonLabel => 'Abbrechen';
 
   @override
   String get cancelar => 'Abbrechen';
@@ -176,7 +176,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get salvar => 'Speichern';
 
   @override
-  String get selectButtonLabel => 'Select';
+  String get selectButtonLabel => 'Auswählen';
 
   @override
   String get selecioneUmaCategoria => 'Wählen Sie oben eine Kategorie aus.';

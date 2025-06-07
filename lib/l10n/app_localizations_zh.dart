@@ -30,7 +30,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get build => '出装';
 
   @override
-  String get cancelButtonLabel => 'Cancel';
+  String get cancelButtonLabel => '取消';
 
   @override
   String get cancelar => '取消';
@@ -176,7 +176,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get salvar => '保存';
 
   @override
-  String get selectButtonLabel => 'Select';
+  String get selectButtonLabel => '选择';
 
   @override
   String get selecioneUmaCategoria => '请在上方选择一个类别。';

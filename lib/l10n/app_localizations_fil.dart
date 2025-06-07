@@ -30,7 +30,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get build => 'Build';
 
   @override
-  String get cancelButtonLabel => 'Cancel';
+  String get cancelButtonLabel => 'Kanselahin';
 
   @override
   String get cancelar => 'Kanselahin';
@@ -176,7 +176,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get salvar => 'I-save';
 
   @override
-  String get selectButtonLabel => 'Select';
+  String get selectButtonLabel => 'Piliin';
 
   @override
   String get selecioneUmaCategoria => 'Pumili ng kategorya sa itaas.';
