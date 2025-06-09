@@ -45,7 +45,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get confirmarLimpeza => '确认清除';
 
   @override
-  String get confirmarLimparTudoDialogoMensagem => '您确定要清除地图上的所有绘图、文本和图标吗？此操作无法撤销。';
+  String get confirmarLimparTudoDialogoMensagem =>
+      '您确定要清除地图上的所有绘图、文本和图标吗？此操作无法撤销。';
 
   @override
   String get confirmarRemocao => '确认移除';
@@ -225,4 +226,31 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get torres => '防御塔';
+
+  @override
+  String get todosTabLabel => 'All';
+
+  @override
+  String get fisicoTabLabel => 'Physical';
+
+  @override
+  String get magicoTabLabel => 'Magical';
+
+  @override
+  String get defesaTabLabel => 'Defense';
+
+  @override
+  String get movimentoTabLabel => 'Movement';
+
+  @override
+  String get cacaTabLabel => 'Jungle';
+
+  @override
+  String get apoioTabLabel => 'Support';
+
+  @override
+  String get erroAoCarregarItens => 'Error loading items';
+
+  @override
+  String get nenhumItemEncontrado => 'No items found';
 }

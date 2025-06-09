@@ -45,16 +45,19 @@ class AppLocalizationsMs extends AppLocalizations {
   String get confirmarLimpeza => 'Sahkan Padam';
 
   @override
-  String get confirmarLimparTudoDialogoMensagem => 'Adakah anda pasti mahu memadam semua lukisan, teks, dan ikon dari peta? Tindakan ini tidak boleh dibatalkan.';
+  String get confirmarLimparTudoDialogoMensagem =>
+      'Adakah anda pasti mahu memadam semua lukisan, teks, dan ikon dari peta? Tindakan ini tidak boleh dibatalkan.';
 
   @override
   String get confirmarRemocao => 'Sahkan Buang';
 
   @override
-  String get confirmarRemoverItemDialogo => 'Adakah anda pasti mahu membuang item ini?';
+  String get confirmarRemoverItemDialogo =>
+      'Adakah anda pasti mahu membuang item ini?';
 
   @override
-  String get confirmarRemoverTodosIconesDialogo => 'Adakah anda pasti mahu membuang SEMUA ikon dari peta? Tindakan ini tidak boleh dibatalkan.';
+  String get confirmarRemoverTodosIconesDialogo =>
+      'Adakah anda pasti mahu membuang SEMUA ikon dari peta? Tindakan ini tidak boleh dibatalkan.';
 
   @override
   String get composicoes => 'Komposisi';
@@ -225,4 +228,31 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get torres => 'Menara';
+
+  @override
+  String get todosTabLabel => 'All';
+
+  @override
+  String get fisicoTabLabel => 'Physical';
+
+  @override
+  String get magicoTabLabel => 'Magical';
+
+  @override
+  String get defesaTabLabel => 'Defense';
+
+  @override
+  String get movimentoTabLabel => 'Movement';
+
+  @override
+  String get cacaTabLabel => 'Jungle';
+
+  @override
+  String get apoioTabLabel => 'Support';
+
+  @override
+  String get erroAoCarregarItens => 'Error loading items';
+
+  @override
+  String get nenhumItemEncontrado => 'No items found';
 }

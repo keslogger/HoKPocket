@@ -80,5 +80,14 @@
   "toolTipExpandSidePanel": "Expandir painel lateral",
   "torneios": "Torneios",
   "torres": "Torres",
-  "preferencias": "Preferências"
+  "preferencias": "Preferências",
+  "todosTabLabel": "Todos",
+  "fisicoTabLabel": "Físico",
+  "magicoTabLabel": "Mágico",
+  "defesaTabLabel": "Defesa",
+  "movimentoTabLabel": "Movimento",
+  "cacaTabLabel": "Caça",
+  "apoioTabLabel": "Apoio",
+  "erroAoCarregarItens": "Erro ao carregar itens",
+  "nenhumItemEncontrado": "Nenhum item encontrado"
 }

@@ -45,16 +45,19 @@ class AppLocalizationsFil extends AppLocalizations {
   String get confirmarLimpeza => 'Kumpirmahin ang Paglilinis';
 
   @override
-  String get confirmarLimparTudoDialogoMensagem => 'Sigurado ka bang gusto mong burahin ang lahat ng guhit, teksto, at icon sa mapa? Hindi na maibabalik ang aksyon na ito.';
+  String get confirmarLimparTudoDialogoMensagem =>
+      'Sigurado ka bang gusto mong burahin ang lahat ng guhit, teksto, at icon sa mapa? Hindi na maibabalik ang aksyon na ito.';
 
   @override
   String get confirmarRemocao => 'Kumpirmahin ang Pagtanggal';
 
   @override
-  String get confirmarRemoverItemDialogo => 'Sigurado ka bang gusto mong tanggalin ang item na ito?';
+  String get confirmarRemoverItemDialogo =>
+      'Sigurado ka bang gusto mong tanggalin ang item na ito?';
 
   @override
-  String get confirmarRemoverTodosIconesDialogo => 'Sigurado ka bang gusto mong tanggalin ang LAHAT ng icon sa mapa? Hindi na maibabalik ang aksyon na ito.';
+  String get confirmarRemoverTodosIconesDialogo =>
+      'Sigurado ka bang gusto mong tanggalin ang LAHAT ng icon sa mapa? Hindi na maibabalik ang aksyon na ito.';
 
   @override
   String get composicoes => 'Mga Komposisyon';
@@ -78,7 +81,8 @@ class AppLocalizationsFil extends AppLocalizations {
   String get estruturas => 'Mga Istruktura';
 
   @override
-  String get funcionalidadeNaoImplementada => 'Hindi pa naipapatupad ang feature.';
+  String get funcionalidadeNaoImplementada =>
+      'Hindi pa naipapatupad ang feature.';
 
   @override
   String get herois => 'Mga Bayani';
@@ -225,4 +229,31 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get torres => 'Mga Tore';
+
+  @override
+  String get todosTabLabel => 'All';
+
+  @override
+  String get fisicoTabLabel => 'Physical';
+
+  @override
+  String get magicoTabLabel => 'Magical';
+
+  @override
+  String get defesaTabLabel => 'Defense';
+
+  @override
+  String get movimentoTabLabel => 'Movement';
+
+  @override
+  String get cacaTabLabel => 'Jungle';
+
+  @override
+  String get apoioTabLabel => 'Support';
+
+  @override
+  String get erroAoCarregarItens => 'Error loading items';
+
+  @override
+  String get nenhumItemEncontrado => 'No items found';
 }

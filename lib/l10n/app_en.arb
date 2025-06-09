@@ -80,5 +80,14 @@
   "toolTipExpandBottomPanel": "Expand bottom panel",
   "toolTipExpandSidePanel": "Expand side panel",
   "torneios": "Tournaments",
-  "torres": "Towers"
+  "torres": "Towers",
+  "todosTabLabel": "All",
+  "fisicoTabLabel": "Physical",
+  "magicoTabLabel": "Magical",
+  "defesaTabLabel": "Defense",
+  "movimentoTabLabel": "Movement",
+  "cacaTabLabel": "Jungle",
+  "apoioTabLabel": "Support",
+  "erroAoCarregarItens": "Error loading items",
+  "nenhumItemEncontrado": "No items found"
 }

@@ -45,16 +45,19 @@ class AppLocalizationsTr extends AppLocalizations {
   String get confirmarLimpeza => 'Temizlemeyi Onayla';
 
   @override
-  String get confirmarLimparTudoDialogoMensagem => 'Haritadaki tüm çizimleri, metinleri ve simgeleri temizlemek istediğinizden emin misiniz? Bu işlem geri alınamaz.';
+  String get confirmarLimparTudoDialogoMensagem =>
+      'Haritadaki tüm çizimleri, metinleri ve simgeleri temizlemek istediğinizden emin misiniz? Bu işlem geri alınamaz.';
 
   @override
   String get confirmarRemocao => 'Kaldırmayı Onayla';
 
   @override
-  String get confirmarRemoverItemDialogo => 'Bu öğeyi kaldırmak istediğinizden emin misiniz?';
+  String get confirmarRemoverItemDialogo =>
+      'Bu öğeyi kaldırmak istediğinizden emin misiniz?';
 
   @override
-  String get confirmarRemoverTodosIconesDialogo => 'Haritadaki TÜM simgeleri kaldırmak istediğinizden emin misiniz? Bu işlem geri alınamaz.';
+  String get confirmarRemoverTodosIconesDialogo =>
+      'Haritadaki TÜM simgeleri kaldırmak istediğinizden emin misiniz? Bu işlem geri alınamaz.';
 
   @override
   String get composicoes => 'Kompozisyonlar';
@@ -225,4 +228,31 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get torres => 'Kuleler';
+
+  @override
+  String get todosTabLabel => 'All';
+
+  @override
+  String get fisicoTabLabel => 'Physical';
+
+  @override
+  String get magicoTabLabel => 'Magical';
+
+  @override
+  String get defesaTabLabel => 'Defense';
+
+  @override
+  String get movimentoTabLabel => 'Movement';
+
+  @override
+  String get cacaTabLabel => 'Jungle';
+
+  @override
+  String get apoioTabLabel => 'Support';
+
+  @override
+  String get erroAoCarregarItens => 'Error loading items';
+
+  @override
+  String get nenhumItemEncontrado => 'No items found';
 }

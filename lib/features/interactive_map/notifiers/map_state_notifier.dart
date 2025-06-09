@@ -1,7 +1,7 @@
 // c:\Users\jkesl\mapahok\lib\features\interactive_map\notifiers\map_state_notifier.dart
 import 'package:flutter/material.dart';
 import 'package:mapahok/features/interactive_map/models/map_element.dart';
-import 'package:uuid/uuid.dart';
+import 'package:uuid/uuid.dart'; // Certifique-se que este import é necessário se Uuid for usado.
 
 class DrawingPath {
   final String id; // Adicionar o campo id
@@ -9,6 +9,8 @@ class DrawingPath {
   final Color color;
   final double strokeWidth;
   final bool isEraser; // Adicionar campo para distinguir traços de borracha
+  // Adicione currentMapScale se o strokeWidth precisar ser ajustado dinamicamente no momento do desenho
+  // final double mapScaleAtCreation;
 
   DrawingPath({
     required this.id, // Adicionar o parâmetro id ao construtor
@@ -16,6 +18,7 @@ class DrawingPath {
     required this.color,
     required this.strokeWidth,
     this.isEraser = false, // Padrão é false
+    // this.mapScaleAtCreation = 1.0,
   });
 }
 
@@ -23,7 +26,7 @@ class MapStateNotifier extends ChangeNotifier {
   final List<PlacedMapElement> _placedElements = [];
   final TransformationController _transformationController =
       TransformationController();
-  final Uuid _uuid = const Uuid(); // Instância do Uuid
+  final _uuid = const Uuid(); // Instância do Uuid
 
   // Estados para ferramentas de desenho
   MapElementType? _activeTool;
@@ -55,10 +58,11 @@ class MapStateNotifier extends ChangeNotifier {
     GlobalKey interactiveViewerKey, // Chave para converter coordenadas
   ) {
     final BuildContext? context = interactiveViewerKey.currentContext;
-    if (context == null) {
-      // print("Contexto do InteractiveViewerKey é nulo.");
-      return;
-    }
+    if (context == null) return;
+
+    // Obter a escala atual do InteractiveViewer para possivelmente armazená-la
+    // se os elementos precisarem ajustar seu tamanho visual de forma diferente do MapPainter
+    // final currentScale = _transformationController.value.storage[0];
 
     final RenderBox renderBox = context.findRenderObject() as RenderBox;
     // Converte a posição global do drop para uma posição local dentro do conteúdo do InteractiveViewer
@@ -70,11 +74,10 @@ class MapStateNotifier extends ChangeNotifier {
         assetPath: assetPath,
         position: localPosition, // Posição já é local para o conteúdo
         type: elementType,
+        // size: elementType == MapElementType.minion ? const Size(70,70) : const Size(50,50), // Exemplo se precisar definir aqui
         // O tamanho padrão é definido em PlacedMapElement
       ),
     );
-    // print(
-    //     "Elemento adicionado: $assetPath em $localPosition (global: $globalPosition)");
     notifyListeners();
   }
 
@@ -109,11 +112,10 @@ class MapStateNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  void startDrawing(Offset startPoint) {
+  void startDrawing(Offset startPoint, double currentMapScale) {
     if (_activeTool != MapElementType.drawingTool) {
       return;
     }
-    // DEBUG: Confirmar início do desenho
     final path = Path();
     path.moveTo(startPoint.dx, startPoint.dy);
     _drawnPaths.add(
@@ -122,6 +124,7 @@ class MapStateNotifier extends ChangeNotifier {
         path: path,
         color: _currentDrawingColor,
         strokeWidth: _currentStrokeWidth,
+        // mapScaleAtCreation: currentMapScale, // Para ajustar o strokeWidth no MapPainter
       ),
     );
     notifyListeners();
@@ -131,8 +134,6 @@ class MapStateNotifier extends ChangeNotifier {
     if (_activeTool != MapElementType.drawingTool || _drawnPaths.isEmpty) {
       return;
     }
-    // DEBUG: Confirmar atualização do desenho (pode ser verboso, mas útil inicialmente)
-    // print("[MapStateNotifier] updateDrawing to $nextPoint");
     _drawnPaths.last.path.lineTo(nextPoint.dx, nextPoint.dy);
     notifyListeners();
   }
@@ -160,14 +161,12 @@ class MapStateNotifier extends ChangeNotifier {
         fontSize: fontSize,
       ),
     );
-    // print("[MapStateNotifier] addTextElement: '$text' at $position with color $color",);
     notifyListeners();
   }
 
   void clearTexts() {
     _placedTexts.clear();
     notifyListeners();
-    // print("[MapStateNotifier] clearTexts called.");
   }
 
   void eraseTextNearPoint(Offset erasePoint, double tapRadius) {
@@ -194,7 +193,6 @@ class MapStateNotifier extends ChangeNotifier {
 
     if (textToRemove != null) {
       _placedTexts.remove(textToRemove);
-      // print("[MapStateNotifier] Erased text at ${textToRemove.position}");
       notifyListeners();
     }
   }
@@ -266,7 +264,6 @@ class MapStateNotifier extends ChangeNotifier {
     if (atLeastOnePathModified || updatedPaths.length != _drawnPaths.length) {
       _drawnPaths.clear();
       _drawnPaths.addAll(updatedPaths);
-      // print("[MapStateNotifier] Applied eraser at $erasePoint. New path count: ${_drawnPaths.length}",);
       notifyListeners();
     }
   }

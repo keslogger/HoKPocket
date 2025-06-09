@@ -45,16 +45,19 @@ class AppLocalizationsFr extends AppLocalizations {
   String get confirmarLimpeza => 'Confirmer l\'effacement';
 
   @override
-  String get confirmarLimparTudoDialogoMensagem => 'Êtes-vous sûr de vouloir effacer tous les dessins, textes et icônes de la carte ? Cette action est irréversible.';
+  String get confirmarLimparTudoDialogoMensagem =>
+      'Êtes-vous sûr de vouloir effacer tous les dessins, textes et icônes de la carte ? Cette action est irréversible.';
 
   @override
   String get confirmarRemocao => 'Confirmer la suppression';
 
   @override
-  String get confirmarRemoverItemDialogo => 'Êtes-vous sûr de vouloir supprimer cet élément ?';
+  String get confirmarRemoverItemDialogo =>
+      'Êtes-vous sûr de vouloir supprimer cet élément ?';
 
   @override
-  String get confirmarRemoverTodosIconesDialogo => 'Êtes-vous sûr de vouloir supprimer TOUTES les icônes de la carte ? Cette action est irréversible.';
+  String get confirmarRemoverTodosIconesDialogo =>
+      'Êtes-vous sûr de vouloir supprimer TOUTES les icônes de la carte ? Cette action est irréversible.';
 
   @override
   String get composicoes => 'Compositions';
@@ -78,7 +81,8 @@ class AppLocalizationsFr extends AppLocalizations {
   String get estruturas => 'Structures';
 
   @override
-  String get funcionalidadeNaoImplementada => 'Fonctionnalité non encore implémentée.';
+  String get funcionalidadeNaoImplementada =>
+      'Fonctionnalité non encore implémentée.';
 
   @override
   String get herois => 'Héros';
@@ -225,4 +229,31 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get torres => 'Tours';
+
+  @override
+  String get todosTabLabel => 'All';
+
+  @override
+  String get fisicoTabLabel => 'Physical';
+
+  @override
+  String get magicoTabLabel => 'Magical';
+
+  @override
+  String get defesaTabLabel => 'Defense';
+
+  @override
+  String get movimentoTabLabel => 'Movement';
+
+  @override
+  String get cacaTabLabel => 'Jungle';
+
+  @override
+  String get apoioTabLabel => 'Support';
+
+  @override
+  String get erroAoCarregarItens => 'Error loading items';
+
+  @override
+  String get nenhumItemEncontrado => 'No items found';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart'; // Importar services para controle de orientação
 import 'package:mapahok/features/interactive_map/screens/interactive_map_screen.dart';
 import 'package:mapahok/features/main_menu/models/menu_item_model.dart';
+import 'package:mapahok/features/items/screens/items_screen.dart'; // Importar a nova tela de itens
 import 'package:mapahok/l10n/app_localizations.dart'; // Importar localizações
 import 'package:provider/provider.dart'; // Para acessar o ThemeNotifier
 import 'package:mapahok/core/notifiers/theme_notifier.dart'; // Importar o ThemeNotifier
@@ -71,7 +72,10 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
         iconLightPath: "assets/icons/menu/tirano-light.PNG",
         iconDarkPath: "assets/icons/menu/tirano-dark.PNG",
         onTap: () {
-          /* TODO: Implementar navegação ou ação */
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ItemsScreen()),
+          );
         },
       ),
       MenuItemModel(

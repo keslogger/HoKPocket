@@ -45,16 +45,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get confirmarLimpeza => 'Confirm Clear';
 
   @override
-  String get confirmarLimparTudoDialogoMensagem => 'Are you sure you want to clear all drawings, texts, and icons from the map? This action cannot be undone.';
+  String get confirmarLimparTudoDialogoMensagem =>
+      'Are you sure you want to clear all drawings, texts, and icons from the map? This action cannot be undone.';
 
   @override
   String get confirmarRemocao => 'Confirm Removal';
 
   @override
-  String get confirmarRemoverItemDialogo => 'Are you sure you want to remove this item?';
+  String get confirmarRemoverItemDialogo =>
+      'Are you sure you want to remove this item?';
 
   @override
-  String get confirmarRemoverTodosIconesDialogo => 'Are you sure you want to remove ALL icons from the map? This action cannot be undone.';
+  String get confirmarRemoverTodosIconesDialogo =>
+      'Are you sure you want to remove ALL icons from the map? This action cannot be undone.';
 
   @override
   String get composicoes => 'Compositions';
@@ -225,4 +228,31 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get torres => 'Towers';
+
+  @override
+  String get todosTabLabel => 'All';
+
+  @override
+  String get fisicoTabLabel => 'Physical';
+
+  @override
+  String get magicoTabLabel => 'Magical';
+
+  @override
+  String get defesaTabLabel => 'Defense';
+
+  @override
+  String get movimentoTabLabel => 'Movement';
+
+  @override
+  String get cacaTabLabel => 'Jungle';
+
+  @override
+  String get apoioTabLabel => 'Support';
+
+  @override
+  String get erroAoCarregarItens => 'Error loading items';
+
+  @override
+  String get nenhumItemEncontrado => 'No items found';
 }
